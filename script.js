@@ -6,7 +6,7 @@ $("#addDvd").on("click",function(){
 })
 $(document).on("click","#addMovie", function(){
     $("#section").append(`<form>
-    <label class="font-color" >Name of movie: <br/></label><input type="text" class="form-control">
+    <label class="font-color" >Name of movie:&nbsp; </label><input type="text">
     <select name="sostojki" class="genre">
         <option id="default" selected disabled="" >
 			<label for="default">Genre</label>
@@ -22,8 +22,10 @@ $(document).on("click","#addMovie", function(){
         <option value="adventure">Adventure</option>
         <option value="animation">Animation</option>
         <option value="scifi">Sci-Fi</option>          
-	</select><br/>
-    <label class="font-color" >Cast : <br/></label>  <input type="text">
+	</select>
+    <label class="font-color">Time of the movie:&nbsp; </label><input type="number"><label class="font-color">Min.</label>.
+    <br/>
+    <label class="font-color" >Cast : &nbsp; </label>  <input type="text">&nbsp;<input type="text">&nbsp;<input type="text">
     </form>`)
 })
 
