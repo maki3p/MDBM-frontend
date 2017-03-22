@@ -23,9 +23,12 @@ $(document).on("click","#addMovie", function(){
         <option value="animation">Animation</option>
         <option value="scifi">Sci-Fi</option>          
 	</select>
-    <label class="font-color">Time of the movie:&nbsp; </label><input type="number"><label class="font-color">Min.</label>.
+    <label class="font-color">Year:&nbsp; </label><input type="number">
+    <label class="font-color">Time:&nbsp; </label><input type="number"><label class="font-color">Min.</label>.
     <br/>
-    <label class="font-color" >Cast : &nbsp; </label>  <input type="text">&nbsp;<input type="text">&nbsp;<input type="text">
+    <label class="font-color" >Cast : &nbsp; </label>  <input type="text">&nbsp;<input type="text">&nbsp;<input type="text"><br/>
+    <label class="font-color">Add Poster of the movie :</label><input type="file">
+    <label class="font-color">Add video trailer:&nbsp;</label><input type="url">
     </form>`)
 })
 
