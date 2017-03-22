@@ -1,11 +1,20 @@
+
+#navbar,
+#section,
+#listOfRec{
+    display: block;
+    margin:0 15% 24px 15%;
+}
+#section{
+   
+    background-color:rgba(14, 11, 13, 0.81);
+}
+.font-color{
+    color: white;
+    font-size: 20px;
+}
 body{
     background: url("./img/back.jpg");
     background-size: cover;
     background-repeat: no-repeat;
-}
-#navbar,
-#newRecept,
-#listOfRec{
-    display: block;
-    margin:0 15% 24px 15%;
 }
