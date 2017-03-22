@@ -1,0 +1,11 @@
+body{
+    background: url("./img/back.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#navbar,
+#newRecept,
+#listOfRec{
+    display: block;
+    margin:0 15% 24px 15%;
+}
