@@ -31,5 +31,32 @@ $(document).on("click","#addMovie", function(){
     <label class="font-color">Add video trailer:&nbsp;</label><input type="url">
     </form>`)
 })
+$("#movieLibery").on("click", function(){
+    $("section").append(`
+    <table class="table table-striped">
+  ...<thead>
+        
+        </thead>
+        <tbody>
+        <tr>
+        <td>#DVD</td>
+        <td>Name of the movie</td>
+        <td>Genre</td>
+        <td>Year</td>
+        <td>Time</td>
+        </tr>
+        </tbody>
+        </table>`)
+})
+class Movie{
+    constructor(name,genre,year,cast,poster,video,time){
+        this.name= name,
+        this.genre = genre,
+        this.year = year,
+        this.cast = cast,
+        this.video = video,
+        this.time = time
+    }
+}
 
 })
