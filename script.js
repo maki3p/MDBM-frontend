@@ -12,17 +12,17 @@ $(document).on("click","#addMovie", function(){
         <option id="default" selected disabled="" >
 			<label for="default">Genre</label>
 		 </option>>
-		<option value="thriller" >Thriller</option>
-		<option value="action">Action</option>
-		<option value="horror">Horror</option>
-        <option value="comedy">Comedy</option>
-        <option value="romacne">Romacne</option>
-        <option value="drama">Drama</option>
-        <option value="musical">Musical</option>
-        <option value="western">Western</option>
-        <option value="adventure">Adventure</option>
-        <option value="animation">Animation</option>
-        <option value="scifi">Sci-Fi</option>          
+		<option value="Thriller" >Thriller</option>
+		<option value="Action">Action</option>
+		<option value="Horror">Horror</option>
+        <option value="Comedy">Comedy</option>
+        <option value="Romacne">Romacne</option>
+        <option value="Drama">Drama</option>
+        <option value="Musical">Musical</option>
+        <option value="Western">Western</option>
+        <option value="Adventure">Adventure</option>
+        <option value="Animation">Animation</option>
+        <option value="Sci-fi">Sci-Fi</option>          
 	</select>
     <label class="font-color">Year:&nbsp; </label><input type="number" id="year">
     <label class="font-color">Time:&nbsp; </label><input type="number" id="time"><label class="font-color">Min.</label>.
@@ -73,5 +73,7 @@ $(document).on("click","#save", function(){
        <td>${movie.year}</td>
        <td>${movie.time}</td>  
        </tr>`)
+       $( "input:reset" )
 })
+
 })
