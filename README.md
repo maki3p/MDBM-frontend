@@ -3,7 +3,7 @@ Front-end project                                                               
 MDBM -  Marjan Data Base Movies
 Website for my dvd collection with divx movies:
 Dvd consists of :
-1.	Number of dvd – automatic generated number,
+1.	Number of dvd – 
 2.	Movies
 
 
