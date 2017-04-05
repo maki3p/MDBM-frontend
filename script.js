@@ -34,7 +34,47 @@ $(document).on("click","#addMovie", function(){
        </tr>`)
        document.forms.form1.reset();     
      $("#oks").on("click", function(){
-           $("#fullD").append(`${numberM.name}`)
+         $("#fullD").show()
+         $("#list1").hide();
+         $("#form1").hide()
+           $("#fullD").append(`
+           <div class="container-fluid">
+      <div class="col-md-4">
+        <img src="./poster/betman.jpg" alt="" id="posterMov" width="320px">
+      </div>
+      <div class="col-md-2">
+
+      </div>
+      <div class="col-md-6">
+        <h1 id="nameMov">${numberM.name}</h1>
+      </div>
+      <div class="col-md-1">
+
+      </div>
+      <div class="col-md-2">
+        <h3 id="genreMov">${numberM.genre}</h3>
+      </div>
+      <div class="col-md-2">
+        <h3 id="yearMov">Year : ${numberM.year}</h3>
+      </div>
+      <div class="col-md-2">
+        <h3 id="timeMov">Time : ${numberM.time} min</h3>
+      </div>
+
+      <div class="col-md-5">
+        <h3 id="castMov">Cast : ${numberM.cast}</h3>
+      </div>
+      <div class="col-md-12"><br/>
+      </div>
+      <div class="col-md-2">
+      </div>
+      <div class="col-md-6">
+        <iframe width="720px" height="480px" src="https://www.youtube.com/embed/XGSy3_Czz8k" id="videoMov">
+        </iframe>
+
+      </div>
+    </div>
+           `)
        })
 });
     
@@ -43,8 +83,10 @@ $("#addDvd").on("click", function(){
     $("#form1").show()
 })
 $("#movieLibery").on("click", function(){
+    $("#list1").show()
     $("#form1").hide()
-
+    $("#fullD").hide()
+    
   
 })
 
