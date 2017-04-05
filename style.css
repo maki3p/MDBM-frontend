@@ -2,7 +2,7 @@
 #navbar,
 #listOfRec,
 #list{
-    display: block;
+    
     margin:0 15% 24px 15%;
 }
 #form1{
@@ -30,7 +30,7 @@ body{
 input[type="number"] {
    width:50px;
 }
-#list{
+#list1{
     border: 2px; 
    border-style: solid;
    border-color: white;

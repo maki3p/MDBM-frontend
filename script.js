@@ -43,7 +43,7 @@ $(document).on("click","#addMovie", function(){
         <img src="./poster/betman.jpg" alt="" id="posterMov" width="320px">
       </div>
       <div class="col-md-2">
-
+        <h1>#${numberM.number}</h1>
       </div>
       <div class="col-md-6">
         <h1 id="nameMov">${numberM.name}</h1>
@@ -61,7 +61,7 @@ $(document).on("click","#addMovie", function(){
         <h3 id="timeMov">Time : ${numberM.time} min</h3>
       </div>
 
-      <div class="col-md-5">
+      <div class="col-md-6">
         <h3 id="castMov">Cast : ${numberM.cast}</h3>
       </div>
       <div class="col-md-12"><br/>
@@ -75,19 +75,21 @@ $(document).on("click","#addMovie", function(){
       </div>
     </div>
            `)
+           
        })
 });
     
 })
 $("#addDvd").on("click", function(){
     $("#form1").show()
+    $("#fullD").hide()
+    $("#fullD").html("");
 })
 $("#movieLibery").on("click", function(){
     $("#list1").show()
     $("#form1").hide()
     $("#fullD").hide()
-    
-  
+    $("#fullD").html("");
 })
 
 
