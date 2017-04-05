@@ -26,7 +26,6 @@ Movies consists of :
 5.	Movie poster
 6.	Video trailer
 7.	Time of movie
-8.	Short Description
 
 A Movie Library consist of:
 1.	Dvd Number
