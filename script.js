@@ -27,18 +27,27 @@ $(document).on("click","#addMovie", function(){
     $("#list1").prepend(`
        <tr> 
        <td>${numberM.number}</td>
-       <td>${numberM.name}</td>
+       <td><a href="#" id="oks">${numberM.name}</a></td>
        <td>${numberM.genre}</td>
        <td>${numberM.year}</td>
        <td>${numberM.time}</td>  
        </tr>`)
-       document.forms.form1.reset();
+       document.forms.form1.reset();     
+     $("#oks").on("click", function(){
+           $("#fullD").append(`${numberM.name}`)
+       })
+});
+    
 })
 $("#addDvd").on("click", function(){
     $("#form1").show()
 })
 $("#movieLibery").on("click", function(){
     $("#form1").hide()
+
+  
 })
 
-})
+
+
+

@@ -38,3 +38,25 @@ input[type="number"] {
     font-size: 20px;
      background-color:rgba(14, 11, 13, 0.81);
 }
+#fullD{
+     margin:0 15% 24px 15%;
+    padding-top: 3%;
+    padding-left: 1%;
+    padding-bottom: 3%;
+   border: 2px; 
+   border-style: solid;
+   border-color: white;
+    background-color:rgba(14, 11, 13,0.90);
+    color:white;
+}
+#posterMov{
+    position: inherit;
+    
+   
+    border: 1px;
+    border-style: solid;
+    border-color: white;
+}
+#nameMov{
+   
+}
