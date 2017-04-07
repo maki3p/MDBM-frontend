@@ -21,8 +21,8 @@ $(document).on("click","#addMovie", function(){
     let castM = $("#cast").val();
     let posterM = $("#poster").val();
     let videoM = $("#video").val();
-
-    numberM = new Movie(numberM,nameM,genreM,yearM,timeM,castM,posterM,videoM)
+    let videoYouTube = videoM.substr(videoM.indexOf("=") + 1)
+    numberM = new Movie(numberM,nameM,genreM,yearM,timeM,castM,posterM,videoYouTube)
   
     $("#list1").prepend(`
        <tr> 
@@ -40,7 +40,7 @@ $(document).on("click","#addMovie", function(){
            $("#fullD").append(`
            <div class="container-fluid">
       <div class="col-md-4">
-        <img src="./poster/betman.jpg" alt="" id="posterMov" width="320px">
+        <img src="${numberM.poster} alt="" id="posterMov" width="320px">
       </div>
       <div class="col-md-2">
         <h1>#${numberM.number}</h1>
@@ -69,9 +69,8 @@ $(document).on("click","#addMovie", function(){
       <div class="col-md-2">
       </div>
       <div class="col-md-6">
-        <iframe width="720px" height="480px" src="https://www.youtube.com/embed/XGSy3_Czz8k" id="videoMov">
+        <iframe width="720px" height="480px" title="YouTube" src="https://www.youtube.com/embed/${numberM.video}"  allowfullscreen id="videoMov">
         </iframe>
-
       </div>
     </div>
            `)
