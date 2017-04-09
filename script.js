@@ -12,6 +12,7 @@ class Movie{
         this.time = time
     }
 }
+
 $(document).on("click","#addMovie", function(){
     let numberM =$("#numOfDvd").val()
     let nameM = $("#nMovie").val();
@@ -40,7 +41,7 @@ $(document).on("click","#addMovie", function(){
            $("#fullD").append(`
            <div class="container-fluid">
       <div class="col-md-4">
-        <img src="${numberM.poster}" alt="${numberM.name}" id="posterMov" width="320px">
+        <img id="blah" src="#" alt="${numberM.name}"  accept="image/*" width="320px">
       </div>
       <div class="col-md-2">
         <h1>#${numberM.number}</h1>
@@ -72,11 +73,9 @@ $(document).on("click","#addMovie", function(){
         <iframe width="720px" height="480px" title="YouTube" src="https://www.youtube.com/embed/${numberM.video}"  allowfullscreen id="videoMov">
         </iframe>
       </div>
-    </div>
-           `)
-          
+    </div> `)
        })
-      
+
 });
     
 
@@ -91,7 +90,7 @@ $("#movieLibery").on("click", function(){
     $("#fullD").hide()
     $("#fullD").html("");
 })
-  
+
 })
 
 
