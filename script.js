@@ -41,7 +41,7 @@ $(document).on("click","#addMovie", function(){
            $("#fullD").append(`
            <div class="container-fluid">
       <div class="col-md-4">
-        <img id="blah" src="#" alt="${numberM.name}"  accept="image/*" width="320px">
+        <img id="posterMov" src="${numberM.poster}"  alt="${numberM.name}"   width="320px">
       </div>
       <div class="col-md-2">
         <h1>#${numberM.number}</h1>
@@ -81,6 +81,7 @@ $(document).on("click","#addMovie", function(){
 
 $("#addDvd").on("click", function(){
     $("#form1").show()
+    $("#list1").show()
     $("#fullD").hide()
     $("#fullD").html("");
 })
@@ -91,7 +92,6 @@ $("#movieLibery").on("click", function(){
     $("#fullD").html("");
 })
 
-})
-
+});
 
 
