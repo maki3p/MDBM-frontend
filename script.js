@@ -48,7 +48,7 @@ $(document).ready(function () {
       </div>
       
       <div class="col-md-4"> <br/>
-        <img id="posterMov" src="./poster/betman.jpg"  alt="${numberM.name}"   width="320px">
+        <img id="posterMov" src="./img/nocover.jpg"  alt="${numberM.name}"   width="320px">
       </div>
       
       <div class="col-md-2">

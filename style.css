@@ -63,3 +63,7 @@ a{
     color: white;
     text-decoration:none
 }
+img{
+    border: 1px;
+    border-radius: 20px;
+}
