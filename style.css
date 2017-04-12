@@ -23,6 +23,8 @@ body{
     background: url("./img/back.jpg");
     background-size: cover;
     background-repeat: no-repeat;
+    background-attachment: fixed
+   
 }
 .genre{
     font-size: 20x;
@@ -57,6 +59,7 @@ input[type="number"] {
     border-style: solid;
     border-color: white;
 }
-#nameMov{
-   
+a{
+    color: white;
+    text-decoration:none
 }
