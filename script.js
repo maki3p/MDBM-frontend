@@ -22,16 +22,16 @@ $(document).ready(function () {
     let castM = $("#cast").val();
     let posterM = $("#poster").val();
     let videoM = $("#video").val();
-    let videoYouTube = videoM.substr(videoM.indexOf("=") + 1)
-    numberM = new Movie(numberM, nameM, genreM, yearM, timeM, castM, posterM, videoYouTube)
-    movies.push(numberM)
+    let videoYouTube = videoM.substr(videoM.indexOf("=") + 1);
+     nameM = new Movie(numberM, nameM, genreM, yearM, timeM, castM, posterM, videoYouTube);
+    movies.push(nameM)
     $("#list1").prepend(`
        <tr> 
-       <td>${numberM.number}</td>
-       <td><a href="#" id="oks">${numberM.name}</a></td>
-       <td>${numberM.genre}</td>
-       <td>${numberM.year}</td>
-       <td>${numberM.time}</td>  
+       <td>${nameM.number}</td>
+       <td><a href="#" id="oks">${nameM.name}</a></td>
+       <td>${nameM.genre}</td>
+       <td>${nameM.year}</td>
+       <td>${nameM.time}</td>  
        <td><button type="button" class="btn btn-info" id="editBtn">Edit</button></td>
        <td><button type="button" class="btn btn-danger" id="delBtn">Delete</button></td>
        </tr>`)
@@ -45,37 +45,37 @@ $(document).ready(function () {
     
       
       <div class="col-md-4"> <br/>
-        <img id="posterMov" src="./img/nocover.jpg"  alt="${numberM.name}"   width="320px">
+        <img id="posterMov" src="./img/nocover.jpg"  alt="${nameM.name}"   width="320px">
       </div>
       
       <div class="col-md-2">
-        <h1>#${numberM.number}</h1>
+        <h1>#${nameM.number}</h1>
       </div>
       <div class="col-md-6">
-        <h1 id="nameMov">${numberM.name}</h1>
+        <h1 id="nameMov">${nameM.name}</h1>
       </div>
       <div class="col-md-1">
 
       </div>
       <div class="col-md-2">
-        <h3 id="genreMov">${numberM.genre}</h3>
+        <h3 id="genreMov">${nameM.genre}</h3>
       </div>
       <div class="col-md-2">
-        <h3 id="yearMov">Year : ${numberM.year}</h3>
+        <h3 id="yearMov">Year : ${nameM.year}</h3>
       </div>
       <div class="col-md-2">
-        <h3 id="timeMov">Time : ${numberM.time} min</h3>
+        <h3 id="timeMov">Time : ${nameM.time} min</h3>
       </div>
 
       <div class="col-md-6">
-        <h3 id="castMov">Cast : ${numberM.cast}</h3>
+        <h3 id="castMov">Cast : ${nameM.cast}</h3>
       </div>
       <div class="col-md-12"><br/>
       </div>
       <div class="col-md-2">
       </div>
       <div class="col-md-6">
-        <iframe width="720px" height="480px" title="YouTube" src="https://www.youtube.com/embed/${numberM.video}"  allowfullscreen id="videoMov">
+        <iframe width="720px" height="480px" title="YouTube" src="https://www.youtube.com/embed/${nameM.video}"  allowfullscreen id="videoMov">
         </iframe>
       </div>
       
@@ -91,19 +91,34 @@ $(document).ready(function () {
     $("#list1").show()
     $("#fullD").hide()
     $("#fullD").html("");
+    $("#addMovie").show()
+    $("#saveEdit").hide()
   });
   $("#movieLibery").on("click", function () {
     $("#list1").show()
     $("#form1").hide()
     $("#fullD").hide()
     $("#fullD").html("");
+    $("#addMovie").show()
+    $("#saveEdit").hide()
   });
-
+$("#saveEdit").hide()
   $(document).on("click", "#editBtn", function () {
     let pass = 1111;
     let passInput = prompt("Enter Password")
     if (pass == passInput) {
       $("#form1").show()
+      $("#saveEdit").show()
+      $("#addMovie").hide()
+      $("#form1").append(``)
+      $("#nMovie").val(``)
+      $("#genre1").val()
+      $("#year").val()
+      $("#time").val()
+      $("#cast").val()
+      $("#poster").val()
+      $("#video").val()
+
     } else {
       alert("Wrong Password")
     }
@@ -119,8 +134,7 @@ $(document).ready(function () {
       alert("Wrong Password")
     }
   })
-
-
+  
 });
 
 
