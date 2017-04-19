@@ -32,6 +32,8 @@ $(document).ready(function () {
        <td>${numberM.genre}</td>
        <td>${numberM.year}</td>
        <td>${numberM.time}</td>  
+       <td><button type="button" class="btn btn-info" id="editBtn">Edit</button></td>
+       <td><button type="button" class="btn btn-danger" id="delBtn">Delete</button></td>
        </tr>`)
     document.forms.form1.reset();
     $("#oks").on("click", function () {
@@ -40,12 +42,7 @@ $(document).ready(function () {
       $("#form1").hide()
       $("#fullD").append(`
            <div class="container-fluid">
-           <div class="col-md-3">
-      <button type="button" class="btn btn-info" id="editBtn" >Edit</button>
-      </div>
-          <div class="col-md-9">
-      <button type="button" class="btn btn-danger" id="delBtn">Delete</button>
-      </div>
+    
       
       <div class="col-md-4"> <br/>
         <img id="posterMov" src="./img/nocover.jpg"  alt="${numberM.name}"   width="320px">
@@ -102,26 +99,28 @@ $(document).ready(function () {
     $("#fullD").html("");
   });
 
-$(document).on("click","#editBtn", function(){
-  let pass = 1111;
-  let passInput = prompt("Enter Password")
-  if(pass == passInput){
-    $("#form1").show()
-  }else{
-    alert("Wrong Password")
-  }
-})
-$(document).on("click","#delBtn", function(){
-  let pass = 1234;
-  let passInput = prompt("Enter Password")
-  if(pass == passInput){
-    
-    alert("Movie Deleted")
-  }else{
-    alert("Wrong Password")
-  }
-})
-  
+  $(document).on("click", "#editBtn", function () {
+    let pass = 1111;
+    let passInput = prompt("Enter Password")
+    if (pass == passInput) {
+      $("#form1").show()
+    } else {
+      alert("Wrong Password")
+    }
+  })
+  $(document).on("click", "#delBtn", function () {
+    let pass = 1234;
+    let passInput = prompt("Enter Password")
+    if (pass == passInput) {
+      $(this).closest('tr').remove();
+     return false;
+      alert("Movie Deleted")
+    } else {
+      alert("Wrong Password")
+    }
+  })
+
+
 });
 
 
