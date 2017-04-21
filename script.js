@@ -49,7 +49,7 @@ $(document).ready(function () {
       </div>
       
       <div class="col-md-2">
-        <h1>#${nameM.number}</h1>
+        <h1>#</h1>
       </div>
       <div class="col-md-6">
         <h1 id="nameMov">${nameM.name}</h1>
@@ -133,7 +133,7 @@ $("#saveEdit").hide()
       alert("Wrong Password")
     }
   })
-  
+     
 });
 
 
