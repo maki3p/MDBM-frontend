@@ -68,3 +68,13 @@ img{
     border: 1px;
     border-radius: 20px;
 }
+th{
+    font-size: 25px;
+    background-color: black;
+}
+#upBtn{
+    position: fixed;
+   bottom: 0%;
+   left: 50%;
+    
+}

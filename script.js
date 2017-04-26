@@ -23,9 +23,10 @@ $(document).ready(function () {
     let posterM = $("#poster").val();
     let videoM = $("#video").val();
     let videoYouTube = videoM.substr(videoM.indexOf("=") + 1);
-     nameM = new Movie(numberM, nameM, genreM, yearM, timeM, castM, posterM, videoYouTube);
+    nameM = new Movie(numberM, nameM, genreM, yearM, timeM, castM, posterM, videoYouTube);
     movies.push(nameM)
     $("#list1").prepend(`
+    <tbody>
        <tr> 
        <td>${nameM.number}</td>
        <td><a href="#" id="oks">${nameM.name}</a></td>
@@ -34,7 +35,9 @@ $(document).ready(function () {
        <td>${nameM.time}</td>  
        <td><button type="button" class="btn btn-info" id="editBtn">Edit</button></td>
        <td><button type="button" class="btn btn-danger" id="delBtn">Delete</button></td>
-       </tr>`)
+       </tr>
+       </tbody>
+       `)
     document.forms.form1.reset();
     $("#oks").on("click", function () {
       $("#fullD").show()
@@ -72,9 +75,9 @@ $(document).ready(function () {
       </div>
       <div class="col-md-12"><br/>
       </div>
-      <div class="col-md-2">
+      <div class="col-md-3">
       </div>
-      <div class="col-md-6">
+      <div class="col-md-5">
         <iframe width="720px" height="480px" title="YouTube" src="https://www.youtube.com/embed/${nameM.video}"  allowfullscreen id="videoMov">
         </iframe>
       </div>
@@ -102,7 +105,7 @@ $(document).ready(function () {
     $("#addMovie").show()
     $("#saveEdit").hide()
   });
-$("#saveEdit").hide()
+  $("#saveEdit").hide()
   $(document).on("click", "#editBtn", function () {
     let pass = 1111;
     let passInput = prompt("Enter Password")
@@ -127,13 +130,33 @@ $("#saveEdit").hide()
     let passInput = prompt("Enter Password")
     if (pass == passInput) {
       $(this).closest('tr').remove();
-     return false;
+      return false;
       alert("Movie Deleted")
     } else {
       alert("Wrong Password")
     }
   })
-     
+  $('th').click(function () {
+    var table = $(this).parents('table').eq(0)
+    var rows = table.find('tr:gt(0)').toArray().sort(comparer($(this).index()))
+    this.asc = !this.asc
+    if (!this.asc) { rows = rows.reverse() }
+    for (var i = 0; i < rows.length; i++) { table.append(rows[i]) }
+  })
+  function comparer(index) {
+    return function (a, b) {
+      var valA = getCellValue(a, index), valB = getCellValue(b, index)
+      return $.isNumeric(valA) && $.isNumeric(valB) ? valA - valB : valA.localeCompare(valB)
+    }
+  }
+  function getCellValue(row, index) { return $(row).children('td').eq(index).html() }
+$(window).scroll(function() {
+    if ($(this).scrollTop()) {
+        $('#upBtn:hidden').stop(true, true).fadeIn();
+    } else {
+        $('#upBtn').stop(true, true).fadeOut();
+    }
+});
 });
 
 
