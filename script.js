@@ -23,6 +23,12 @@ $(document).ready(function () {
     let posterM = $("#poster").val();
     let videoM = $("#video").val();
     let videoYouTube = videoM.substr(videoM.indexOf("=") + 1);
+    nameM = nameM.toLowerCase().replace(/^[\u00C0-\u1FFF\u2C00-\uD7FF\w]|\s[\u00C0-\u1FFF\u2C00-\uD7FF\w]/g, function(letter) {
+    return letter.toUpperCase();   
+});
+    castM = castM.toLowerCase().replace(/^[\u00C0-\u1FFF\u2C00-\uD7FF\w]|\s[\u00C0-\u1FFF\u2C00-\uD7FF\w]/g, function(letter) {
+    return letter.toUpperCase();
+});
     nameM = new Movie(numberM, nameM, genreM, yearM, timeM, castM, posterM, videoYouTube);
     movies.push(nameM)
     $("#list1").prepend(`
@@ -52,7 +58,7 @@ $(document).ready(function () {
       </div>
       
       <div class="col-md-2">
-        <h1>#</h1>
+        <h1># ${nameM.number}</h1>
       </div>
       <div class="col-md-6">
         <h1 id="nameMov">${nameM.name}</h1>
@@ -136,6 +142,7 @@ $(document).ready(function () {
       alert("Wrong Password")
     }
   })
+  
   $('th').click(function () {
     var table = $(this).parents('table').eq(0)
     var rows = table.find('tr:gt(0)').toArray().sort(comparer($(this).index()))
@@ -157,6 +164,9 @@ $(window).scroll(function() {
         $('#upBtn').stop(true, true).fadeOut();
     }
 });
+   
+
 });
+
 
 
