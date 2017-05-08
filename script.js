@@ -20,9 +20,10 @@ $(document).ready(function () {
     let yearM = $("#year").val();
     let timeM = $("#time").val();
     let castM = $("#cast").val();
-    let posterM = $("#poster").val();
+    let posterM = $("#poster").val()
     let videoM = $("#video").val();
     let videoYouTube = videoM.substr(videoM.indexOf("=") + 1);
+  
     nameM = nameM.toLowerCase().replace(/^[\u00C0-\u1FFF\u2C00-\uD7FF\w]|\s[\u00C0-\u1FFF\u2C00-\uD7FF\w]/g, function(letter) {
     return letter.toUpperCase();   
 });
@@ -32,7 +33,7 @@ $(document).ready(function () {
     nameM = new Movie(numberM, nameM, genreM, yearM, timeM, castM, posterM, videoYouTube);
     movies.push(nameM)
     $("#list1").prepend(`
-    <tbody>
+    
        <tr> 
        <td>${nameM.number}</td>
        <td><a href="#" id="oks">${nameM.name}</a></td>
@@ -42,7 +43,7 @@ $(document).ready(function () {
        <td><button type="button" class="btn btn-info" id="editBtn">Edit</button></td>
        <td><button type="button" class="btn btn-danger" id="delBtn">Delete</button></td>
        </tr>
-       </tbody>
+     
        `)
     document.forms.form1.reset();
     $("#oks").on("click", function () {
@@ -54,7 +55,7 @@ $(document).ready(function () {
     
       
       <div class="col-md-4"> <br/>
-        <img id="posterMov" src="./img/nocover.jpg"  alt="${nameM.name}"   width="320px">
+        <img id="posterMov" src="${nameM.poster}"  alt="${nameM.name}"   width="320px">
       </div>
       
       <div class="col-md-2">
@@ -136,8 +137,8 @@ $(document).ready(function () {
     let passInput = prompt("Enter Password")
     if (pass == passInput) {
       $(this).closest('tr').remove();
-      return false;
-      alert("Movie Deleted")
+      return false,
+       alert("Movie Deleted")
     } else {
       alert("Wrong Password")
     }
@@ -164,7 +165,16 @@ $(window).scroll(function() {
         $('#upBtn').stop(true, true).fadeOut();
     }
 });
-   
+
+$("#search").keyup(function() {
+    var value = this.value;
+
+    $("table").find("tr").each(function(index) {
+        if (!index) return;
+        var id = $(this).find("td").first().text();
+        $(this).toggle(id.indexOf(value) !== -1);
+    });
+});
 
 });
 
