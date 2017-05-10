@@ -175,8 +175,44 @@ $("#search").keyup(function() {
         $(this).toggle(id.indexOf(value) !== -1);
     });
 });
+$('#randomMovie').click(function() {
+
+     var count = $('#list1').children().length;
+     for (i = 0; i < count; i++) {
+    
+     }
+  
+    var randomNum = Math.floor(Math.random() * count);
+
+    // This brings you back up to a range of 1 to 16
+    var actualNum = randomNum + 1;
+
+    // Grabs and holds the table cell for that number
+    // Example: number 10 would be third row, second column
+    var randomtd = $('#board td').eq(randomNum);
+
+    // Calculate and store which row
+    // by dividing the generated number by the number of rows, and rounding up
+    var whichRow = Math.ceil(actualNum / 4);
+
+    // Calculate and store which column
+   // by using modulo to find the remainder of the number divided by the rows
+   // If the modulo result is '0', then set it to '4'
+    var whichColumn = (actualNum % 4) == 0 ? 4 : (actualNum % 4);
+
+    // Display results in an alert
+
+    alert('theNumber: ' + actualNum + ' row: ' + whichRow + '  column: ' + whichColumn);
+
+   // For fun, and to show that you have the td stored
+   // Display the number in the correct td
+   // and set the text color to grey, since the table is black
+   randomtd.text(actualNum).css({color:'#DDD'});
+});
+
 
 });
+
 
 
 
