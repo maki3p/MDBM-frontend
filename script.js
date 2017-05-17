@@ -39,7 +39,7 @@ $(document).ready(function () {
        <td><a href="#" id="oks">${nameM.name}</a></td>
        <td>${nameM.genre}</td>
        <td>${nameM.year}</td>
-       <td>${nameM.time}</td>  
+       <td>${nameM.time} Min.</td>  
        <td><button type="button" class="btn btn-info" id="editBtn">Edit</button></td>
        <td><button type="button" class="btn btn-danger" id="delBtn">Delete</button></td>
        </tr>
