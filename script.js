@@ -55,36 +55,36 @@ $(document).ready(function () {
     
       
       <div class="col-md-4"> <br/>
-        <img id="posterMov" src="${nameM.poster}"  alt="${nameM.name}"   width="320px">
+        <img id="posterMov" src="./poster/betman.jpg"  alt="${nameM.name}"   width="100%">
       </div>
-      
       <div class="col-md-2">
         <h1># ${nameM.number}</h1>
       </div>
       <div class="col-md-6">
         <h1 id="nameMov">${nameM.name}</h1>
+
       </div>
       <div class="col-md-1">
 
       </div>
       <div class="col-md-2">
-        <h3 id="genreMov">${nameM.genre}</h3>
+        <h4 id="genreMov">${nameM.genre}</h4>
       </div>
       <div class="col-md-2">
-        <h3 id="yearMov">Year : ${nameM.year}</h3>
+        <h4 id="yearMov">Year : ${nameM.year}</h4>
       </div>
       <div class="col-md-2">
-        <h3 id="timeMov">Time : ${nameM.time} min</h3>
+        <h4 id="timeMov">Time : ${nameM.time} Min</h4>
       </div>
 
       <div class="col-md-6">
-        <h3 id="castMov">Cast : ${nameM.cast}</h3>
+        <h4 id="castMov">Cast : ${nameM.cast}</h4>
       </div>
       <div class="col-md-12"><br/>
       </div>
-      <div class="col-md-3">
+      <div class="col-md-1">
       </div>
-      <div class="col-md-5">
+      <div class="col-md-10">
         <iframe width="720px" height="480px" title="YouTube" src="https://www.youtube.com/embed/${nameM.video}"  allowfullscreen id="videoMov">
         </iframe>
       </div>
