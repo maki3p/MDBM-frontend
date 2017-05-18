@@ -23,6 +23,14 @@ $(document).ready(function () {
     let posterM = $("#poster").val()
     let videoM = $("#video").val();
     let videoYouTube = videoM.substr(videoM.indexOf("=") + 1);
+    if(nameM == false){
+      alert("Enter Movie Name")
+    }else if(numberM == false ){
+      alert("Enter a DVD Number")
+    }else{
+      alert("Successfully Add")
+    }
+
   
     nameM = nameM.toLowerCase().replace(/^[\u00C0-\u1FFF\u2C00-\uD7FF\w]|\s[\u00C0-\u1FFF\u2C00-\uD7FF\w]/g, function(letter) {
     return letter.toUpperCase();   
@@ -143,7 +151,7 @@ $(document).ready(function () {
       alert("Wrong Password")
     }
   })
-  
+
   $('th').click(function () {
     var table = $(this).parents('table').eq(0)
     var rows = table.find('tr:gt(0)').toArray().sort(comparer($(this).index()))
