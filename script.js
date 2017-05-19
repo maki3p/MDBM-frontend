@@ -20,7 +20,7 @@ $(document).ready(function () {
     let yearM = $("#year").val();
     let timeM = $("#time").val();
     let castM = $("#cast").val();
-    let posterM = $("#poster").val()
+    let posterM = $("#poster")
     let videoM = $("#video").val();
     let videoYouTube = videoM.substr(videoM.indexOf("=") + 1);
     if(nameM == false){
@@ -33,7 +33,7 @@ $(document).ready(function () {
       alert("Successfully added new Movie")
     }
 
-  
+
     nameM = nameM.toLowerCase().replace(/^[\u00C0-\u1FFF\u2C00-\uD7FF\w]|\s[\u00C0-\u1FFF\u2C00-\uD7FF\w]/g, function(letter) {
     return letter.toUpperCase();   
 });
@@ -65,7 +65,7 @@ $(document).ready(function () {
     
       
       <div class="col-md-4"> <br/>
-        <img id="posterMov" src="./poster/betman.jpg"  alt="${nameM.name}"   width="100%">
+        <img id="posterMov" src="${nameM.poster}"  alt="${nameM.name}"   width="100%" onError="this.onerror=null;this.src='img/nocover.jpg';">
       </div>
       <div class="col-md-2">
         <h1># ${nameM.number}</h1>
