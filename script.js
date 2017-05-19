@@ -25,10 +25,12 @@ $(document).ready(function () {
     let videoYouTube = videoM.substr(videoM.indexOf("=") + 1);
     if(nameM == false){
       alert("Enter Movie Name")
+      $("#addMovie").disable()
     }else if(numberM == false ){
       alert("Enter a DVD Number")
+      $("#addMovie").disable()
     }else{
-      alert("Successfully Add")
+      alert("Successfully added new Movie")
     }
 
   
