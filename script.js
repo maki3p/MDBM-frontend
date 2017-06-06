@@ -11,6 +11,7 @@ $(document).ready(function () {
         this.video = video,
         this.time = time
     }
+
   }
 
   $(document).on("click", "#addMovie", function () {
@@ -20,28 +21,31 @@ $(document).ready(function () {
     let yearM = $("#year").val();
     let timeM = $("#time").val();
     let castM = $("#cast").val();
-    let posterM = $("#poster")
+    let posterM = $("#poster").val();
     let videoM = $("#video").val();
     let videoYouTube = videoM.substr(videoM.indexOf("=") + 1);
-    if(nameM == false){
+
+    if (nameM == false) {
       alert("Enter Movie Name")
-      $("#addMovie").disable()
-    }else if(numberM == false ){
+      $("#addMovie").dis()
+    } else if (numberM == false) {
       alert("Enter a DVD Number")
       $("#addMovie").disable()
-    }else{
+    } else {
       alert("Successfully added new Movie")
     }
 
-
-    nameM = nameM.toLowerCase().replace(/^[\u00C0-\u1FFF\u2C00-\uD7FF\w]|\s[\u00C0-\u1FFF\u2C00-\uD7FF\w]/g, function(letter) {
-    return letter.toUpperCase();   
-});
-    castM = castM.toLowerCase().replace(/^[\u00C0-\u1FFF\u2C00-\uD7FF\w]|\s[\u00C0-\u1FFF\u2C00-\uD7FF\w]/g, function(letter) {
-    return letter.toUpperCase();
-});
+    nameM = nameM.toLowerCase().replace(/^[\u00C0-\u1FFF\u2C00-\uD7FF\w]|\s[\u00C0-\u1FFF\u2C00-\uD7FF\w]/g, function (letter) {
+      return letter.toUpperCase();
+    });
+    castM = castM.toLowerCase().replace(/^[\u00C0-\u1FFF\u2C00-\uD7FF\w]|\s[\u00C0-\u1FFF\u2C00-\uD7FF\w]/g, function (letter) {
+      return letter.toUpperCase();
+    });
     nameM = new Movie(numberM, nameM, genreM, yearM, timeM, castM, posterM, videoYouTube);
     movies.push(nameM)
+
+     
+     
     $("#list1").prepend(`
     
        <tr> 
@@ -52,9 +56,7 @@ $(document).ready(function () {
        <td>${nameM.time} Min.</td>  
        <td><button type="button" class="btn btn-info" id="editBtn">Edit</button></td>
        <td><button type="button" class="btn btn-danger" id="delBtn">Delete</button></td>
-       </tr>
-     
-       `)
+       </tr> `)
     document.forms.form1.reset();
     $("#oks").on("click", function () {
       $("#fullD").show()
@@ -65,7 +67,7 @@ $(document).ready(function () {
     
       
       <div class="col-md-4"> <br/>
-        <img id="posterMov" src="${nameM.poster}"  alt="${nameM.name}"   width="100%" onError="this.onerror=null;this.src='img/nocover.jpg';">
+        <img id="posterMov" src="${nameM.poster}"  alt="${nameM.name}"   width="290px" onError="this.onerror=null;this.src='img/nocover.jpg';">
       </div>
       <div class="col-md-2">
         <h1># ${nameM.number}</h1>
@@ -92,7 +94,7 @@ $(document).ready(function () {
       </div>
       <div class="col-md-12"><br/>
       </div>
-      <div class="col-md-1">
+      <div class="col-md-2">
       </div>
       <div class="col-md-10">
         <iframe width="720px" height="480px" title="YouTube" src="https://www.youtube.com/embed/${nameM.video}"  allowfullscreen id="videoMov">
@@ -104,6 +106,7 @@ $(document).ready(function () {
 
 
   });
+
 
 
   $("#addDvd").on("click", function () {
@@ -148,7 +151,7 @@ $(document).ready(function () {
     if (pass == passInput) {
       $(this).closest('tr').remove();
       return false,
-       alert("Movie Deleted")
+        alert("Movie Deleted")
     } else {
       alert("Wrong Password")
     }
@@ -168,58 +171,24 @@ $(document).ready(function () {
     }
   }
   function getCellValue(row, index) { return $(row).children('td').eq(index).html() }
-$(window).scroll(function() {
+  $(window).scroll(function () {
     if ($(this).scrollTop()) {
-        $('#upBtn:hidden').stop(true, true).fadeIn();
+      $('#upBtn:hidden').stop(true, true).fadeIn();
     } else {
-        $('#upBtn').stop(true, true).fadeOut();
+      $('#upBtn').stop(true, true).fadeOut();
     }
-});
+  });
 
-$("#search").keyup(function() {
+  $("#search").keyup(function () {
     var value = this.value;
 
-    $("table").find("tr").each(function(index) {
-        if (!index) return;
-        var id = $(this).find("td").first().text();
-        $(this).toggle(id.indexOf(value) !== -1);
+    $("table").find("tr").each(function (index) {
+      if (!index) return;
+      var id = $(this).find("td").first().text();
+      $(this).toggle(id.indexOf(value) !== -1);
     });
-});
-$('#randomMovie').click(function() {
-
-     var count = $('#list1').children().length;
-     for (i = 0; i < count; i++) {
-    
-     }
+  });
   
-    var randomNum = Math.floor(Math.random() * count);
-
-    // This brings you back up to a range of 1 to 16
-    var actualNum = randomNum + 1;
-
-    // Grabs and holds the table cell for that number
-    // Example: number 10 would be third row, second column
-    var randomtd = $('#board td').eq(randomNum);
-
-    // Calculate and store which row
-    // by dividing the generated number by the number of rows, and rounding up
-    var whichRow = Math.ceil(actualNum / 4);
-
-    // Calculate and store which column
-   // by using modulo to find the remainder of the number divided by the rows
-   // If the modulo result is '0', then set it to '4'
-    var whichColumn = (actualNum % 4) == 0 ? 4 : (actualNum % 4);
-
-    // Display results in an alert
-
-    alert('theNumber: ' + actualNum + ' row: ' + whichRow + '  column: ' + whichColumn);
-
-   // For fun, and to show that you have the td stored
-   // Display the number in the correct td
-   // and set the text color to grey, since the table is black
-   randomtd.text(actualNum).css({color:'#DDD'});
-});
-
 
 });
 
