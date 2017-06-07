@@ -47,8 +47,8 @@ $(document).ready(function () {
 
      
      
-    $("#list1").append(`
-    <tbody>
+    $("#tBody").prepend(`
+    
     <tr>
        <td>${nameM.number}</td>
        <td><a href="#" id="oks">${nameM.name}</a></td>
@@ -57,8 +57,11 @@ $(document).ready(function () {
        <td>${nameM.time} Min.</td> 
        <td><button type="button" class="btn btn-danger" id="delBtn">Delete</button></td>
        </tr>
-       </tbody> `)
+     `)
+            
+
     document.forms.form1.reset();
+
     $("#oks").on("click", function () {
       $("#fullD").show()
       $("#list1").hide();
@@ -70,7 +73,7 @@ $(document).ready(function () {
       <div class="col-md-4"> <br/>
         <img id="posterMov" src="${nameM.poster}"  alt="${nameM.name}"   width="290px" onError="this.onerror=null;this.src='img/nocover.jpg';">
       </div>
-      <div class="col-md-2">
+      <div class="col-md-1">
         <h1># ${nameM.number}</h1>
       </div>
       <div class="col-md-6">
@@ -160,7 +163,15 @@ $(document).ready(function () {
     }
   });
 
- 
+$("#search").keyup(function() {
+    var value = this.value;
+
+    $("table").find("tr").each(function(index) {
+        if (!index) return;
+        var id = $(this).find("td").first().text();
+        $(this).toggle(id.indexOf(value) !== -1);
+    });
+});
   
 
 });
