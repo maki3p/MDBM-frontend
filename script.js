@@ -48,14 +48,16 @@ $(document).ready(function () {
      
      
     $("#list1").append(`
+    <tbody>
     <tr>
        <td>${nameM.number}</td>
-       <td>${nameM.name}</a></td>
+       <td><a href="#" id="oks">${nameM.name}</a></td>
        <td>${nameM.genre}</td>
        <td>${nameM.year}</td>
        <td>${nameM.time} Min.</td> 
        <td><button type="button" class="btn btn-danger" id="delBtn">Delete</button></td>
-       </tr> `)
+       </tr>
+       </tbody> `)
     document.forms.form1.reset();
     $("#oks").on("click", function () {
       $("#fullD").show()
