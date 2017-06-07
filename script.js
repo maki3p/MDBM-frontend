@@ -27,7 +27,8 @@ $(document).ready(function () {
 
     if (nameM == false) {
       alert("Enter Movie Name")
-      $("#addMovie").dis()
+      $("#addMovie").error()
+      
     } else if (numberM == false) {
       alert("Enter a DVD Number")
       $("#addMovie").disable()
@@ -46,15 +47,13 @@ $(document).ready(function () {
 
      
      
-    $("#list1").prepend(`
-    
-       <tr> 
+    $("#list1").append(`
+    <tr>
        <td>${nameM.number}</td>
-       <td><a href="#" id="oks">${nameM.name}</a></td>
+       <td>${nameM.name}</a></td>
        <td>${nameM.genre}</td>
        <td>${nameM.year}</td>
-       <td>${nameM.time} Min.</td>  
-       <td><button type="button" class="btn btn-info" id="editBtn">Edit</button></td>
+       <td>${nameM.time} Min.</td> 
        <td><button type="button" class="btn btn-danger" id="delBtn">Delete</button></td>
        </tr> `)
     document.forms.form1.reset();
@@ -126,25 +125,7 @@ $(document).ready(function () {
     $("#saveEdit").hide()
   });
   $("#saveEdit").hide()
-  $(document).on("click", "#editBtn", function () {
-    let pass = 1111;
-    let passInput = prompt("Enter Password")
-    if (pass == passInput) {
-      $("#form1").show()
-      $("#saveEdit").show()
-      $("#addMovie").hide()
-      $("#nMovie").val()
-      $("#genre1").val()
-      $("#year").val()
-      $("#time").val()
-      $("#cast").val()
-      $("#poster").val()
-      $("#video").val()
-
-    } else {
-      alert("Wrong Password")
-    }
-  })
+ 
   $(document).on("click", "#delBtn", function () {
     let pass = 1234;
     let passInput = prompt("Enter Password")
