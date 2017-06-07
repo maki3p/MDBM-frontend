@@ -114,17 +114,15 @@ $(document).ready(function () {
     $("#fullD").hide()
     $("#fullD").html("");
     $("#addMovie").show()
-    $("#saveEdit").hide()
   });
   $("#movieLibery").on("click", function () {
     $("#list1").show()
     $("#form1").hide()
     $("#fullD").hide()
     $("#fullD").html("");
-    $("#addMovie").show()
-    $("#saveEdit").hide()
+    $("#addMovie").show()   
   });
-  $("#saveEdit").hide()
+  
  
   $(document).on("click", "#delBtn", function () {
     let pass = 1234;
