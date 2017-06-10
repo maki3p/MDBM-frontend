@@ -250,7 +250,7 @@ $("#searchBtn").keyup(function () {
     });
 });
   
-  
+  console.log(movies)
  
 });
 
