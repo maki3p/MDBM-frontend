@@ -1,0 +1,152 @@
+[
+    {
+        "number": "1",
+        "name": "Lara Croft: Tomb Raider",
+        "genre": "Action",
+        "year": "2001",
+        "cast": "Angelina Jolie, Jon Voight, Iain Glen",
+        "poster": "https://images-na.ssl-images-amazon.com/images/M/MV5BNzMzODVjMWUtYmIxZS00ND…I5NTdhZjUzYzY1XkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_UX182_CR0,0,182,268_AL_.jpg",
+        "video": "cnNBqNb3taw",
+        "time": "100"
+    },
+    {
+        "number": "2",
+        "name": "Batman V Superman: Dawn Of Justice",
+        "genre": "Action",
+        "year": "2016",
+        "cast": "Ben Affleck, Henry Cavill, Amy Adams",
+        "poster": "https://images-na.ssl-images-amazon.com/images/M/MV5BYThjYzcyYzItNTVjNy00ND…MwNmNlNWJhMzMyXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_UX182_CR0,0,182,268_AL_.jpg",
+        "video": "eX_iASz1Si8",
+        "time": "151"
+    },
+    {
+        "number": "2",
+        "name": "The Avengers",
+        "genre": "Sci-fi",
+        "year": "2012",
+        "cast": "Robert Downey Jr., Chris Evans, Mark Ruffalo, Chris Hemsworth",
+        "poster": "https://images-na.ssl-images-amazon.com/images/M/MV5BMTk2NTI1MTU4N15BMl5BanBnXkFtZTcwODg0OTY0Nw@@._V1_UX182_CR0,0,182,268_AL_.jpg",
+        "video": "NPoHPNeU9fc",
+        "time": "153"
+    },
+    {
+        "number": "3",
+        "name": "Iron Man",
+        "genre": "Action",
+        "year": "2008",
+        "cast": "Robert Downey Jr., Terrence Howard, Jeff Bridges",
+        "poster": "https://images-na.ssl-images-amazon.com/images/M/MV5BMTczNTI2ODUwOF5BMl5BanBnXkFtZTcwMTU0NTIzMw@@._V1_UX182_CR0,0,182,268_AL_.jpg",
+        "video": "bK_Y5LjSJ-Y",
+        "time": "126"
+    },
+    {
+        "number": "4",
+        "name": "Resident Evil: The Final Chapter",
+        "genre": "Horror",
+        "year": "2016",
+        "cast": "Milla Jovovich, Iain Glen, Ali Larter ,shawn Roberts",
+        "poster": "https://images-na.ssl-images-amazon.com/images/M/MV5BMTc0Mzc2OTQ0Ml5BMl5BanBnXkFtZTgwOTQ5MjE4MDI@._V1_UX182_CR0,0,182,268_AL_.jpg",
+        "video": "hfby7XwoBl0",
+        "time": "107"
+    },
+    {
+        "number": "4",
+        "name": "Underworld: Evolution",
+        "genre": "Horror",
+        "year": "2006",
+        "cast": "Kate Beckinsale, \tScott Speedman, \tTony Curran, \tDerek Jacobi",
+        "poster": "https://images-na.ssl-images-amazon.com/images/M/MV5BMjEzNDY1OTQwOV5BMl5BanBnXkFtZTcwNjcxMTIzMw@@._V1_UX182_CR0,0,182,268_AL_.jpg",
+        "video": "cCtm8L4PQt8",
+        "time": "106"
+    },
+    {
+        "number": "5",
+        "name": "The Hangover",
+        "genre": "Comedy",
+        "year": "2009",
+        "cast": "\tBradley Cooper, Ed Helms, Zach Galifianakis, Justin Bartha, Heather Graham",
+        "poster": "https://images-na.ssl-images-amazon.com/images/M/MV5BMTU1MDA1MTYwMF5BMl5BanBnXkFtZTcwMDcxMzA1Mg@@._V1_UX182_CR0,0,182,268_AL_.jpg",
+        "video": "tcdUhdOlz9M",
+        "time": "100"
+    },
+    {
+        "number": "5",
+        "name": "Kick-ass ",
+        "genre": "Comedy",
+        "year": "2010",
+        "cast": "Aaron Taylor-johnson, Garrett M. Brown, Evan Peters",
+        "poster": "https://images-na.ssl-images-amazon.com/images/M/MV5BMTMzNzEzMDYxM15BMl5BanBnXkFtZTcwMTc0NTMxMw@@._V1_UX182_CR0,0,182,268_AL_.jpg",
+        "video": "rFpWpkxsVI8",
+        "time": "118"
+    },
+    {
+        "number": "5",
+        "name": "21 Jump Street",
+        "genre": "Comedy",
+        "year": "2012",
+        "cast": "Jonah Hill, Channing Tatum, \tBrie Larson",
+        "poster": "https://images-na.ssl-images-amazon.com/images/M/MV5BMTc3NzQ3OTg3NF5BMl5BanBnXkFtZTcwMjk5OTcxNw@@._V1_UX182_CR0,0,182,268_AL_.jpg",
+        "video": "RLoKtb4c4W0",
+        "time": "110"
+    },
+    {
+        "number": "6",
+        "name": "Ted",
+        "genre": "Comedy",
+        "year": "2012",
+        "cast": "Mark Wahlberg, Mila Kunis, Seth Macfarlane",
+        "poster": "https://images-na.ssl-images-amazon.com/images/M/MV5BMTQ1OTU0ODcxMV5BMl5BanBnXkFtZTcwOTMxNTUwOA@@._V1_UX182_CR0,0,182,268_AL_.jpg",
+        "video": "9fbo_pQvU7M",
+        "time": "106"
+    },
+    {
+        "number": "21",
+        "name": "The Legend Of Tarzan",
+        "genre": "Adventure",
+        "year": "2016",
+        "cast": "Alexander Skarsgård, Rory J. Saper, Christian Stevens",
+        "poster": "https://images-na.ssl-images-amazon.com/images/M/MV5BMzY3OTI0OTcyMF5BMl5BanBnXkFtZTgwNjkxNTAwOTE@._V1_UX182_CR0,0,182,268_AL_.jpg",
+        "video": "Aj7ty6sViiU",
+        "time": "110"
+    },
+    {
+        "number": "23",
+        "name": "Independence Day: Resurgence",
+        "genre": "Sci-fi",
+        "year": "2016",
+        "cast": "Liam Hemsworth, Jeff Goldblum, Jessie T. Usher",
+        "poster": "https://images-na.ssl-images-amazon.com/images/M/MV5BMjIyMTg5MTg4OV5BMl5BanBnXkFtZTgwMzkzMjY5NzE@._V1_UX182_CR0,0,182,268_AL_.jpg",
+        "video": "RXHN0sGbXfw",
+        "time": "120"
+    },
+    {
+        "number": "15",
+        "name": "Star Trek Beyond ",
+        "genre": "Sci-fi",
+        "year": "2016",
+        "cast": "Chris Pine, Zachary Quinto, \tKarl Urban, Zoe Saldana",
+        "poster": "https://images-na.ssl-images-amazon.com/images/M/MV5BZDRiOGE5ZTctOWIxOS00MW…IwMDQwNzBjZDY1XkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_UX182_CR0,0,182,268_AL_.jpg",
+        "video": "XRVD32rnzOw",
+        "time": "202"
+    },
+    {
+        "number": "13",
+        "name": "Doctor Strange",
+        "genre": "Action",
+        "year": "2016",
+        "cast": "Benedict Cumberbatch, Chiwetel Ejiofor, Rachel Mcadams",
+        "poster": "https://images-na.ssl-images-amazon.com/images/M/MV5BNjgwNzAzNjk1Nl5BMl5BanBnXkFtZTgwMzQ2NjI1OTE@._V1_UX182_CR0,0,182,268_AL_.jpg",
+        "video": "HSzx-zryEgM",
+        "time": "155"
+    },
+    {
+        "number": "11",
+        "name": "Rogue One",
+        "genre": "Action",
+        "year": "2016",
+        "cast": "Felicity Jones, Diego Luna,\tAlan Tudyk",
+        "poster": "https://images-na.ssl-images-amazon.com/images/M/MV5BMjEwMzMxODIzOV5BMl5BanBnXkFtZTgwNzg3OTAzMDI@._V1_UX182_CR0,0,182,268_AL_.jpg",
+        "video": "frdj1zb9sMY",
+        "time": "133"
+    }
+]
