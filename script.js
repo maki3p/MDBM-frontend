@@ -28,7 +28,11 @@ $(document).ready(function () {
     if (nameM == false) {
       alert("Enter Movie Name")
       $("#addMovie").error()
+<<<<<<< HEAD
 
+=======
+      
+>>>>>>> origin/master
     } else if (numberM == false) {
       alert("Enter a DVD Number")
       $("#addMovie").disable()
@@ -45,8 +49,13 @@ $(document).ready(function () {
     nameM = new Movie(numberM, nameM, genreM, yearM, timeM, castM, posterM, videoYouTube);
     movies.push(nameM)
 
+<<<<<<< HEAD
 
 
+=======
+     
+     
+>>>>>>> origin/master
     $("#tBody").prepend(`
     
     <tr>
@@ -58,8 +67,12 @@ $(document).ready(function () {
        <td><button type="button" class="btn btn-danger" id="delBtn">Delete</button></td>
        </tr>
      `)
+<<<<<<< HEAD
 
 
+=======
+            
+>>>>>>> origin/master
 
     document.forms.form1.reset();
 
@@ -74,7 +87,7 @@ $(document).ready(function () {
       <div class="col-md-4"> <br/>
         <img id="posterMov" src="${nameM.poster}"  alt="${nameM.name}"   width="290px" onError="this.onerror=null;this.src='img/nocover.jpg';">
       </div>
-      <div class="col-md-2">
+      <div class="col-md-1">
         <h1># ${nameM.number}</h1>
       </div>
       <div class="col-md-6">
@@ -100,7 +113,7 @@ $(document).ready(function () {
       </div>
       <div class="col-md-12"><br/>
       </div>
-      <div class="col-md-1">
+      <div class="col-md-2">
       </div>
       <div class="col-md-10">
         <iframe width="720px" height="480px" title="YouTube" src="https://www.youtube.com/embed/${nameM.video}"  allowfullscreen id="videoMov">
@@ -127,10 +140,17 @@ $(document).ready(function () {
     $("#form1").hide()
     $("#fullD").hide()
     $("#fullD").html("");
+<<<<<<< HEAD
     $("#addMovie").show()
   });
 
 
+=======
+    $("#addMovie").show()   
+  });
+  
+ 
+>>>>>>> origin/master
   $(document).on("click", "#delBtn", function () {
     let pass = 1234;
     let passInput = prompt("Enter Password")
@@ -166,6 +186,7 @@ $(document).ready(function () {
   });
 
 
+<<<<<<< HEAD
  
   $.getJSON("movies.json", function (movieJson) {
    
@@ -252,6 +273,16 @@ $("#searchBtn").keyup(function () {
   
   console.log(movies)
  
+=======
+    $("table").find("tr").each(function(index) {
+        if (!index) return;
+        var id = $(this).find("td").first().text();
+        $(this).toggle(id.indexOf(value) !== -1);
+    });
+});
+  
+
+>>>>>>> origin/master
 });
 
 
