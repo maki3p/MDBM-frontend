@@ -28,11 +28,8 @@ $(document).ready(function () {
     if (nameM == false) {
       alert("Enter Movie Name")
       $("#addMovie").error()
-<<<<<<< HEAD
 
-=======
       
->>>>>>> origin/master
     } else if (numberM == false) {
       alert("Enter a DVD Number")
       $("#addMovie").disable()
@@ -49,13 +46,10 @@ $(document).ready(function () {
     nameM = new Movie(numberM, nameM, genreM, yearM, timeM, castM, posterM, videoYouTube);
     movies.push(nameM)
 
-<<<<<<< HEAD
 
 
-=======
      
      
->>>>>>> origin/master
     $("#tBody").prepend(`
     
     <tr>
@@ -67,12 +61,11 @@ $(document).ready(function () {
        <td><button type="button" class="btn btn-danger" id="delBtn">Delete</button></td>
        </tr>
      `)
-<<<<<<< HEAD
 
 
-=======
+
+
             
->>>>>>> origin/master
 
     document.forms.form1.reset();
 
@@ -140,17 +133,13 @@ $(document).ready(function () {
     $("#form1").hide()
     $("#fullD").hide()
     $("#fullD").html("");
-<<<<<<< HEAD
+
     $("#addMovie").show()
   });
 
 
-=======
-    $("#addMovie").show()   
-  });
   
- 
->>>>>>> origin/master
+
   $(document).on("click", "#delBtn", function () {
     let pass = 1234;
     let passInput = prompt("Enter Password")
@@ -186,7 +175,6 @@ $(document).ready(function () {
   });
 
 
-<<<<<<< HEAD
  
   $.getJSON("movies.json", function (movieJson) {
    
@@ -268,22 +256,17 @@ $("#searchBtn").keyup(function () {
             $(this).closest('tr').toggle(!not_found);
             return not_found;
         });
-    });
-});
-  
-  console.log(movies)
- 
-=======
-    $("table").find("tr").each(function(index) {
-        if (!index) return;
-        var id = $(this).find("td").first().text();
-        $(this).toggle(id.indexOf(value) !== -1);
-    });
-});
-  
+          
 
->>>>>>> origin/master
+    })
 });
+console.log(movies)
+});
+
+
+
+ 
+
 
 
 
