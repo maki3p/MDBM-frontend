@@ -260,6 +260,10 @@ $("#searchBtn").keyup(function () {
 
     })
 });
+
+$("#numberOfMovies").on("click", function(){
+    alert(movies.length)
+})
 console.log(movies)
 });
 
