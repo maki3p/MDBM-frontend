@@ -29,7 +29,7 @@ $(document).ready(function () {
       alert("Enter Movie Name")
       $("#addMovie").error()
 
-      
+
     } else if (numberM == false) {
       alert("Enter a DVD Number")
       $("#addMovie").disable()
@@ -48,8 +48,8 @@ $(document).ready(function () {
 
 
 
-     
-     
+
+
     $("#tBody").prepend(`
     
     <tr>
@@ -65,7 +65,7 @@ $(document).ready(function () {
 
 
 
-            
+
 
     document.forms.form1.reset();
 
@@ -138,7 +138,7 @@ $(document).ready(function () {
   });
 
 
-  
+
 
   $(document).on("click", "#delBtn", function () {
     let pass = 1234;
@@ -175,9 +175,9 @@ $(document).ready(function () {
   });
 
 
- 
+
   $.getJSON("movies.json", function (movieJson) {
-   
+
 
     movieJson.forEach(function (moviesL) {
       movies.push(moviesL)
@@ -245,31 +245,27 @@ $(document).ready(function () {
 
   });
 
-$("#searchBtn").keyup(function () {
+  $("#searchBtn").keyup(function () {
     var value = this.value.toLowerCase().trim();
 
     $("table tr").each(function (index) {
-        if (!index) return;
-        $(this).find("td").each(function () {
-            var id = $(this).text().toLowerCase().trim();
-            var not_found = (id.indexOf(value) == -1);
-            $(this).closest('tr').toggle(!not_found);
-            return not_found;
-        });
-          
+      if (!index) return;
+      $(this).find("td").each(function () {
+        var id = $(this).text().toLowerCase().trim();
+        var not_found = (id.indexOf(value) == -1);
+        $(this).closest('tr').toggle(!not_found);
+        return not_found;
+      });
+
 
     })
-});
+  });
 
-$("#numberOfMovies").on("click", function(){
+  $("#numbOfMovies").on("click", function () {
     alert(movies.length)
-})
-console.log(movies)
+  })
 });
 
-
-
- 
 
 
 

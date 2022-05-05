@@ -1,7 +1,7 @@
 [
     {
         "number": "1",
-        "name": "Lara Croft: Tomb Raider",
+        "name": "30 days of night",
         "genre": "Action",
         "year": "2001",
         "cast": "Angelina Jolie, Jon Voight, Iain Glen",
@@ -140,6 +140,15 @@
         "time": "155"
     },
     {
+        "number": "11",
+        "name": "Rogue One",
+        "genre": "Action",
+        "year": "2016",
+        "cast": "Felicity Jones, Diego Luna,\tAlan Tudyk",
+        "poster": "https://images-na.ssl-images-amazon.com/images/M/MV5BMjEwMzMxODIzOV5BMl5BanBnXkFtZTgwNzg3OTAzMDI@._V1_UX182_CR0,0,182,268_AL_.jpg",
+        "video": "frdj1zb9sMY",
+        "time": "133"
+    },  {
         "number": "11",
         "name": "Rogue One",
         "genre": "Action",
