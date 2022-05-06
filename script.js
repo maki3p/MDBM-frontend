@@ -1,4 +1,7 @@
+var year = new Date().getFullYear();
 $(document).ready(function () {
+  $('#mj').append(`Marjan Josifovski ${year} &copy;`)
+
   let movies = []
   class Movie {
     constructor(number, name, genre, year, time, cast, poster, video) {
@@ -264,9 +267,17 @@ $(document).ready(function () {
   $("#numbOfMovies").on("click", function () {
     alert(movies.length)
   })
+
+  $('#printTable').on('click', function () {
+    ExportToExcel('Movies');
+  })
 });
 
-
+function ExportToExcel(filename) {
+  var elt = document.getElementById('list1');
+  var wb = XLSX.utils.table_to_book(elt, { sheet: "sheet1" });
+  XLSX.writeFile(wb, filename + '.xlsx');
+}
 
 
 
